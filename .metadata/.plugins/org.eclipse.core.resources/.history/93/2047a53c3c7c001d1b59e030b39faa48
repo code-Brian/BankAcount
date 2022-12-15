@@ -1,0 +1,31 @@
+
+public class BankAccount {
+	private double checkingBalance;
+	private double savingsBalance;
+	private static int totalCustomers;
+	private static double grossAccountBalance;
+	
+	// Basic constructor
+	public BankAccount() {
+		this.checkingBalance = 0.0;
+		this.savingsBalance = 0.0;
+		totalCustomers++;
+	}
+	
+	// Getter
+	public double getCheckingBalance() {
+		return checkingBalance;
+	}
+	
+	public double getSavingsBalance() {
+		return savingsBalance;
+	}
+	
+	public void depositFunds(String account, double depositAmt) {
+		if(account == "savings") {
+			savingsBalance+= depositAmt;
+		} else if (account == "checking") {
+			checkingBalance += depositAmt;
+		}
+	}
+}

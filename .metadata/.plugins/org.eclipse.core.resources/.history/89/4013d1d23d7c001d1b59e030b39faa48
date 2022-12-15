@@ -1,0 +1,12 @@
+
+public class TestBank {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		BankAccount testAccount = new BankAccount();
+		
+		testAccount.depositFunds("checking", 0.69);
+		testAccount.depositFunds("saving", 4.20);
+	}
+
+}
